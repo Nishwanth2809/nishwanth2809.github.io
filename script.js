@@ -1,14 +1,22 @@
-/* Dark Mode Toggle */
 const toggle = document.getElementById("themeToggle");
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  toggle.textContent =
-    document.body.classList.contains("dark") ? "☀️" : "🌙";
-});
 
-document.body.classList.toggle("dark");
+if (toggle) {
+  const savedTheme = localStorage.getItem("theme");
 
-/* Scroll Animations */
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "Light";
+  } else {
+    toggle.textContent = "Dark";
+  }
+
+  toggle.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    toggle.textContent = isDark ? "Light" : "Dark";
+  });
+}
+
 const slides = document.querySelectorAll(".slide");
 
 const reveal = () => {

@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nishwanth | Developer Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nishwanth | AIML Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
 <header>
@@ -16,8 +17,10 @@
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <button id="themeToggle">🌙</button>
+    <button id="themeToggle">Dark</button>
   </nav>
 </header>
 
@@ -27,57 +30,89 @@
   <img src="profile.png" alt="Nishwanth profile photo" class="profile-img">
 
   <h2>Hello, I’m <span>Nishwanth</span></h2>
-  <p>AI Developer & Machine Learning Enthusiast</p>
 
-  <a href="#projects" class="btn">View Projects</a>
+  <p class="hero-title">
+    AIML Aspirant | Machine Learning & AI Application Developer
+  </p>
+
+  <p class="hero-subtitle">
+    Building real-world AI systems using ML, NLP, and backend APIs
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="Nishwanth_Resume.pdf" class="btn-outline" target="_blank">
+      View Resume
+    </a>
+  </div>
 </section>
-
 
 <section id="about" class="section slide">
   <h3>About Me</h3>
+
   <p>
-    I am a Computer Science student and a Machine Learning enthusiast,
-    currently building a strong foundation in machine learning concepts
-    and backend development. I have solid programming fundamentals in
-    Python, Java, and C, and I enjoy applying these skills to create
-    practical, real-world applications.
+    I am a Computer Science student with a strong interest in Artificial
+    Intelligence and Machine Learning. I focus on applying ML concepts
+    to real-world problems by building practical, end-to-end applications.
   </p>
+
   <p>
-    I am continuously learning, experimenting with projects, and improving
-    my problem-solving abilities while exploring how machine learning can
-    be integrated into intelligent systems.
+    I have hands-on experience working with Python, backend APIs, NLP,
+    and speech-based AI systems, and I enjoy converting ideas into
+    deployable solutions.
   </p>
+
+  <ul class="highlights">
+    <li>Hands-on experience building ML-backed applications</li>
+    <li>Worked with NLP and speech-based AI systems</li>
+    <li>Deployed and maintained live AI projects</li>
+  </ul>
 </section>
 
 <section id="skills" class="section section-alt slide">
-  <h3>Skills</h3>
-
-  <div class="skill-group">
-  <h4>Programming</h4>
-  <div class="skills">
-    <span>Python</span>
-    <span>Java</span>
-    <span>C</span>
-    <span>JavaScript</span>
-    <span>SQL</span>
-  </div>
-</div>
-
+  <h3>Technical Skills (Applied in Projects)</h3>
 
   <div class="skill-group">
     <h4>AI & Machine Learning</h4>
     <div class="skills">
-      <span>Machine Learning</span>
-      <span>AI Concepts</span>
-      <span>Model Training</span>
+      <span>Machine Learning Fundamentals</span>
+      <span>NLP Basics</span>
+      <span>Speech Processing (TTS / STT)</span>
+      <span>Model Training & Evaluation</span>
     </div>
   </div>
 
   <div class="skill-group">
-    <h4>Backend & Web</h4>
+    <h4>Programming & Core CS</h4>
+    <div class="skills">
+      <span>Java (OOPS)</span>
+      <span>Python</span>
+      <span>C</span>
+      <span>JavaScript</span>
+      <span>Data Structures & Algorithms (Java)</span>
+      <span>SQL</span>
+      <span>HTML5</span>
+      <span>CSS3</span>
+    </div>
+  </div>
+
+  <div class="skill-group">
+    <h4>Backend & APIs</h4>
     <div class="skills">
       <span>Flask</span>
       <span>FastAPI</span>
+      <span>REST APIs</span>
+      <span>API Integration</span>
+    </div>
+  </div>
+
+  <div class="skill-group">
+    <h4>Deployment</h4>
+    <div class="skills">
+      <span>GitHub Pages</span>
+      <span>Render</span>
+      <span>Custom Domain Setup</span>
+      <span>HTTPS / SSL</span>
     </div>
   </div>
 
@@ -87,77 +122,89 @@
       <span>Git</span>
       <span>GitHub</span>
       <span>VS Code</span>
+      <span>Linux (Basic)</span>
       <span>Canva</span>
-      <span>Linux</span>
     </div>
   </div>
 </section>
-
 
 <section id="projects" class="section slide">
   <h3>Projects</h3>
 
   <div class="project">
-  <h4>Mood-Based Music Recommendation System</h4>
-  <p>
-    AI-powered system that analyzes user mood through text/voice input
-    and recommends music using the Spotify API.
-  </p>
+    <h4>Mood-Based Music Recommendation System</h4>
 
-  <a href="https://github.com/nishwanth2809/moodstream" target="_blank">
-    GitHub →
-  </a>
+    <p>
+      Built an AI-driven application that analyzes user mood from text and
+      voice input using NLP techniques and recommends personalized music
+      through Spotify API.
+    </p>
 
-  <a href="https://moodstream-q4lr.onrender.com" target="_blank" style="margin-left:10px;">
-    Live Demo →
-  </a>
-</div>
+    <p><strong>Tech Stack:</strong> Python, NLP, Flask, Spotify API, HTML, CSS, JavaScript</p>
 
+    <a href="https://github.com/nishwanth2809/moodstream" target="_blank">GitHub →</a>
+    <a href="https://moodstream-q4lr.onrender.com" target="_blank" style="margin-left:10px;">
+      Live Demo →
+    </a>
+  </div>
 
   <div class="project">
-  <h4>Voice Chat AI Assistant</h4>
-  <p>
-    Real-time speech-to-text AI assistant with FastAPI backend
-    for intelligent conversational responses.
-  </p>
+    <h4>Voice Chat AI Assistant</h4>
 
-  <a href="https://github.com/nishwanth2809/Text-to-Speech" target="_blank">
-    GitHub →
-  </a>
+    <p>
+      Developed a speech-based AI assistant capable of converting voice
+      input to text and generating intelligent responses using a FastAPI backend.
+    </p>
 
-  <a href="https://nishwanth2809.github.io/Text-to-Speech/" target="_blank" style="margin-left:10px;">
-    Live Demo →
-  </a>
-</div>
+    <p><strong>Tech Stack:</strong> Python, FastAPI, Speech Processing, HTML, CSS, JavaScript</p>
 
-
+    <a href="https://github.com/nishwanth2809/Text-to-Speech" target="_blank">GitHub →</a>
+    <a href="https://nishwanth2809.github.io/Text-to-Speech/" target="_blank" style="margin-left:10px;">
+      Live Demo →
+    </a>
+  </div>
 </section>
 
+<section id="experience" class="section slide">
+  <h3>Experience</h3>
+
+  <div class="experience-item">
+    <h4>Design Member</h4>
+    <p><em>SDC (Sreyas Developer’s Conference)</em></p>
+
+    <ul class="highlights">
+      <li>Designed posters, banners, and digital content for events</li>
+      <li>Collaborated with team members to maintain visual consistency</li>
+      <li>Improved event outreach and online engagement</li>
+    </ul>
+
+    <p>
+      <strong>Event:</strong>
+      <a href="https://sreyasdevconf.in/team" target="_blank">
+        SDC Team Page →
+      </a>
+    </p>
+
+    <p><strong>Tools:</strong> Canva</p>
+  </div>
+</section>
+
+<section id="contact" class="section section-alt slide">
+  <h3>Connect With Me</h3>
+
+  <div class="contact-links">
+    <a href="https://github.com/nishwanth2809" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/yarranishwanth" target="_blank">LinkedIn</a>
+    <a href="mailto:nishwanthyarra@gmail.com">Email</a>
+  </div>
+</section>
 
 </main>
 
 <footer>
-  <p>© 2025 Nishwanth. All rights reserved.</p>
+  <p>© 2026 Nishwanth. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nishwanth - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- NAVBAR -->
-    <header>
-        <nav>
-            <h2 class="logo">Nishwanth</h2>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+</body>
+</html>

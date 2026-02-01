@@ -5,6 +5,8 @@
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
+// Start site in dark mode by default
+document.body.classList.add("dark");
 
 window.addEventListener('load', () => {
   window.scrollTo(0, 0);
@@ -59,17 +61,25 @@ const navLinks = document.querySelectorAll(".nav-links a");
 const setActiveLink = () => {
   let currentSection = "";
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 160;
-    const sectionHeight = section.offsetHeight;
+  const scrollPosition = window.scrollY + window.innerHeight;
+  const pageHeight = document.documentElement.scrollHeight;
 
-    if (
-      window.scrollY >= sectionTop &&
-      window.scrollY < sectionTop + sectionHeight
-    ) {
-      currentSection = section.getAttribute("id");
-    }
-  });
+  // ✅ If user is at bottom → Contact must be active
+  if (scrollPosition >= pageHeight - 5) {
+    currentSection = "contact";
+  } else {
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 170;
+      const sectionHeight = section.offsetHeight;
+
+      if (
+        window.scrollY >= sectionTop &&
+        window.scrollY < sectionTop + sectionHeight
+      ) {
+        currentSection = section.getAttribute("id");
+      }
+    });
+  }
 
   navLinks.forEach(link => {
     link.classList.remove("active");
@@ -78,6 +88,11 @@ const setActiveLink = () => {
     }
   });
 };
+
+window.addEventListener("scroll", setActiveLink);
+window.addEventListener("load", setActiveLink);
+
+
 
 window.addEventListener("scroll", setActiveLink);
 window.addEventListener("load", setActiveLink);

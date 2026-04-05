@@ -133,7 +133,7 @@ const skillGroups = [
         />
       </svg>
     ),
-    skills: ['GitHub Pages', 'Render', 'Custom Domain Setup', 'HTTPS / SSL'],
+    skills: ['GitHub Pages', 'Render', 'HTTPS / SSL'],
   },
   {
     id: 'tools',

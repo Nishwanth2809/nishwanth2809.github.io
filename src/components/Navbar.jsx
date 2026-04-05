@@ -47,16 +47,6 @@ export default function Navbar({ isDark, toggleTheme }) {
       <div className="navbar-inner">
         <div className="navbar-logo">Nishwanth</div>
 
-        <button 
-          className={`hamburger ${menuOpen ? 'open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           {navItems.map(item => (
             <li key={item}>
@@ -74,13 +64,25 @@ export default function Navbar({ isDark, toggleTheme }) {
           ))}
         </ul>
 
-        <button 
-          className="theme-toggle" 
-          onClick={toggleTheme}
-          aria-label="Toggle theme"
-        >
-          {isDark ? '☀️' : '🌙'}
-        </button>
+        <div className="navbar-actions">
+          <button
+            className={`hamburger ${menuOpen ? 'open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            {isDark ? '☀️' : '🌙'}
+          </button>
+        </div>
       </div>
     </header>
   )

@@ -1,0 +1,32 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="40" fill="#081216"/>
+  <rect x="36" y="36" width="1128" height="648" rx="30" fill="url(#bg)"/>
+  <rect x="88" y="88" width="700" height="544" rx="28" fill="#0F1D24"/>
+  <rect x="824" y="88" width="288" height="168" rx="24" fill="#11252E"/>
+  <rect x="824" y="284" width="288" height="168" rx="24" fill="#11252E"/>
+  <rect x="824" y="480" width="288" height="152" rx="24" fill="#11252E"/>
+  <rect x="128" y="128" width="620" height="396" rx="24" fill="#132833"/>
+  <circle cx="438" cy="318" r="124" fill="#173847"/>
+  <circle cx="438" cy="282" r="60" fill="#F4C4A8"/>
+  <path d="M350 402C372 357 409 334 438 334C467 334 504 357 526 402V452H350V402Z" fill="#1C4253"/>
+  <circle cx="408" cy="284" r="8" fill="#0B1317"/>
+  <circle cx="470" cy="284" r="8" fill="#0B1317"/>
+  <path d="M414 312H462" stroke="#0B1317" stroke-width="6" stroke-linecap="round"/>
+  <path d="M438 318L523 285" stroke="#67E8C9" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="523" cy="285" r="11" fill="#67E8C9"/>
+  <rect x="860" y="120" width="156" height="20" rx="10" fill="#6EE7B7"/>
+  <text x="860" y="176" fill="#DFFBF5" font-family="Arial, sans-serif" font-size="56" font-weight="700">84</text>
+  <text x="950" y="176" fill="#8BCDBB" font-family="Arial, sans-serif" font-size="24" font-weight="700">/100</text>
+  <text x="860" y="214" fill="#A3C3BB" font-family="Arial, sans-serif" font-size="20">Attention Score</text>
+  <path d="M860 358C895 314 934 362 968 330C1001 298 1039 380 1072 340" stroke="#7DD3FC" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="860" y="518" fill="#DFFBF5" font-family="Arial, sans-serif" font-size="26" font-weight="700">Live Session</text>
+  <rect x="860" y="548" width="120" height="16" rx="8" fill="#2B4956"/>
+  <rect x="860" y="578" width="184" height="16" rx="8" fill="#2B4956"/>
+  <text x="128" y="574" fill="#94C6BD" font-family="Arial, sans-serif" font-size="22">Eye tracking + blink rate + head pose</text>
+  <defs>
+    <linearGradient id="bg" x1="36" y1="36" x2="1164" y2="684" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B171C"/>
+      <stop offset="1" stop-color="#071014"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,29 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="40" fill="#130B1F"/>
+  <rect x="36" y="36" width="1128" height="648" rx="30" fill="url(#bg)"/>
+  <rect x="92" y="92" width="1016" height="536" rx="30" fill="#1A1030"/>
+  <circle cx="232" cy="360" r="108" fill="#2B194A"/>
+  <circle cx="232" cy="360" r="70" fill="#FF8FB8"/>
+  <rect x="392" y="132" width="286" height="52" rx="18" fill="#251443"/>
+  <text x="424" y="166" fill="#FFE7F1" font-family="Arial, sans-serif" font-size="28" font-weight="700">MoodStream</text>
+  <rect x="392" y="226" width="644" height="92" rx="24" fill="#22133F"/>
+  <text x="430" y="280" fill="#D8C2F5" font-family="Arial, sans-serif" font-size="26">Detected mood: Happy / Energetic</text>
+  <rect x="392" y="358" width="198" height="190" rx="24" fill="#2C1952"/>
+  <rect x="614" y="358" width="198" height="190" rx="24" fill="#2C1952"/>
+  <rect x="836" y="358" width="198" height="190" rx="24" fill="#2C1952"/>
+  <circle cx="491" cy="428" r="42" fill="#FDBA74"/>
+  <circle cx="713" cy="428" r="42" fill="#A78BFA"/>
+  <circle cx="935" cy="428" r="42" fill="#34D399"/>
+  <rect x="436" y="500" width="110" height="14" rx="7" fill="#845BC4"/>
+  <rect x="658" y="500" width="110" height="14" rx="7" fill="#845BC4"/>
+  <rect x="880" y="500" width="110" height="14" rx="7" fill="#845BC4"/>
+  <path d="M166 360c20-32 44-48 66-48s46 16 66 48" stroke="#321B57" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="206" cy="340" r="8" fill="#321B57"/>
+  <circle cx="258" cy="340" r="8" fill="#321B57"/>
+  <defs>
+    <linearGradient id="bg" x1="36" y1="36" x2="1164" y2="684" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B1030"/>
+      <stop offset="1" stop-color="#0E0918"/>
+    </linearGradient>
+  </defs>
+</svg>

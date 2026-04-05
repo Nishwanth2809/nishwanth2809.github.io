@@ -1,0 +1,26 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="40" fill="#09131A"/>
+  <rect x="36" y="36" width="1128" height="648" rx="30" fill="url(#bg)"/>
+  <rect x="98" y="98" width="1004" height="524" rx="30" fill="#101D28"/>
+  <circle cx="600" cy="284" r="132" fill="#15293A"/>
+  <circle cx="600" cy="284" r="82" fill="#69B8FF"/>
+  <rect x="560" y="214" width="80" height="128" rx="40" fill="#0C1822"/>
+  <rect x="584" y="342" width="32" height="54" rx="16" fill="#0C1822"/>
+  <path d="M544 266c0 32 25 58 56 58 31 0 56-26 56-58" stroke="#0C1822" stroke-width="12" stroke-linecap="round"/>
+  <path d="M600 408v36" stroke="#69B8FF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M552 444h96" stroke="#69B8FF" stroke-width="12" stroke-linecap="round"/>
+  <rect x="178" y="488" width="324" height="88" rx="24" fill="#152637"/>
+  <rect x="522" y="488" width="502" height="88" rx="24" fill="#152637"/>
+  <text x="202" y="542" fill="#C8E6FF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Listening...</text>
+  <text x="548" y="542" fill="#C8E6FF" font-family="Arial, sans-serif" font-size="24" font-weight="700">AI response generated</text>
+  <path d="M224 300c10-28 28-48 52-62" stroke="#4CC9F0" stroke-width="8" stroke-linecap="round"/>
+  <path d="M250 344c22-44 56-76 100-100" stroke="#4CC9F0" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+  <path d="M950 300c-10-28-28-48-52-62" stroke="#A78BFA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M924 344c-22-44-56-76-100-100" stroke="#A78BFA" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+  <defs>
+    <linearGradient id="bg" x1="36" y1="36" x2="1164" y2="684" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C1820"/>
+      <stop offset="1" stop-color="#071015"/>
+    </linearGradient>
+  </defs>
+</svg>

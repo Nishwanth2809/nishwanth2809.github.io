@@ -1,0 +1,33 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="40" fill="#09111F"/>
+  <rect x="36" y="36" width="1128" height="648" rx="30" fill="url(#bg)"/>
+  <rect x="84" y="88" width="260" height="544" rx="28" fill="#111C34" opacity="0.96"/>
+  <rect x="392" y="88" width="724" height="96" rx="24" fill="#121F3E"/>
+  <rect x="392" y="220" width="430" height="364" rx="28" fill="#0F1A31"/>
+  <rect x="856" y="220" width="260" height="364" rx="28" fill="#0F1A31"/>
+  <circle cx="607" cy="372" r="116" fill="#1B2B52"/>
+  <circle cx="607" cy="336" r="62" fill="#F6C7B1"/>
+  <path d="M522 449C544 403 581 380 607 380C633 380 670 403 692 449V488H522V449Z" fill="#202E56"/>
+  <circle cx="575" cy="338" r="8" fill="#0B1324"/>
+  <circle cx="639" cy="338" r="8" fill="#0B1324"/>
+  <path d="M583 366C596 375 618 375 631 366" stroke="#0B1324" stroke-width="6" stroke-linecap="round"/>
+  <rect x="898" y="256" width="176" height="22" rx="11" fill="#7C8BFF"/>
+  <rect x="898" y="300" width="152" height="18" rx="9" fill="#36528F"/>
+  <rect x="898" y="334" width="122" height="18" rx="9" fill="#36528F"/>
+  <rect x="898" y="392" width="176" height="130" rx="18" fill="#15254A"/>
+  <rect x="116" y="124" width="120" height="14" rx="7" fill="#6E80FF"/>
+  <rect x="116" y="168" width="164" height="16" rx="8" fill="#314A7D"/>
+  <rect x="116" y="208" width="130" height="16" rx="8" fill="#314A7D"/>
+  <rect x="116" y="300" width="196" height="92" rx="22" fill="#162648"/>
+  <rect x="116" y="422" width="196" height="92" rx="22" fill="#162648"/>
+  <rect x="116" y="544" width="164" height="18" rx="9" fill="#314A7D"/>
+  <text x="404" y="150" fill="#EAF0FF" font-family="Arial, sans-serif" font-size="34" font-weight="700">Deepfake Detection Dashboard</text>
+  <text x="898" y="282" fill="#EAF0FF" font-family="Arial, sans-serif" font-size="18" font-weight="700">Confidence Score</text>
+  <text x="930" y="466" fill="#9DB0DA" font-family="Arial, sans-serif" font-size="64" font-weight="700">91%</text>
+  <defs>
+    <linearGradient id="bg" x1="36" y1="36" x2="1164" y2="684" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1831"/>
+      <stop offset="1" stop-color="#07101D"/>
+    </linearGradient>
+  </defs>
+</svg>

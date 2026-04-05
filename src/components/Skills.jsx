@@ -150,7 +150,7 @@ const skillGroups = [
         />
       </svg>
     ),
-    skills: ['VS Code', 'Linux (Basic)', 'Canva', 'Git & GitHub', 'Figma', 'Adobe XD', 'Postman', 'UI/UX Principles'],
+    skills: ['VS Code', 'Linux', 'Canva', 'Git & GitHub', 'Figma', 'Adobe XD', 'Postman', 'UI/UX Principles'],
   },
 ]
 

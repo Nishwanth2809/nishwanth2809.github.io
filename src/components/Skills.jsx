@@ -24,7 +24,7 @@ const skillGroups = [
   {
     title: 'Tools',
     icon: '🔧',
-    skills: ['VS Code', 'Linux (Basic)', 'Canva', 'Git & GitHub'],
+    skills: ['VS Code', 'Linux (Basic)', 'Canva', 'Git & GitHub', 'Figma', 'UI/UX Principles'],
   },
 ]
 

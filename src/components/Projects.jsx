@@ -2,6 +2,22 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const projects = [
   {
+    title: 'Deepfake Detection System',
+    description:
+      'Built an AI-powered deepfake image detection system using PyTorch and ResNet18, featuring face-level analysis and a Streamlit web interface for real-time predictions.',
+    tech: ['Python', 'PyTorch', 'ResNet18', 'OpenCV', 'Streamlit', 'Deep Learning'],
+    github: 'https://github.com/Nishwanth2809/Deep-Fake-Detection',
+    live: null,
+  },
+  {
+    title: 'AI Attention Monitoring System',
+    description:
+      'Developed a real-time attention monitoring system using computer vision that tracks eye gaze, head pose, and blink rate to compute a live Attention Score (0–100) with session history.',
+    tech: ['Python', 'OpenCV', 'MediaPipe', 'Flask', 'SQLite', 'NumPy'],
+    github: 'https://github.com/Nishwanth2809/AI-Attention',
+    live: null,
+  },
+  {
     title: 'AI Medical Report Analyzer',
     description:
       'Built an AI-powered application that analyzes medical reports, extracts key clinical insights, and presents a clear summary to improve readability and decision support.',

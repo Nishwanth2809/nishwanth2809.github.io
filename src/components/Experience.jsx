@@ -29,6 +29,26 @@ export default function Experience() {
             <span><strong>Tools:</strong> Canva</span>
           </div>
         </div>
+
+        <div className="experience-card" style={{ marginTop: '24px' }}>
+          <h4>Full Stack Web Development Intern</h4>
+          <p className="experience-org">ElevanceSkills &nbsp;·&nbsp; Apr 2026 – Oct 2026 (6 Months)</p>
+
+          <ul className="experience-list">
+            <li>Working on real-time projects in a dynamic full stack development environment</li>
+            <li>Building and deploying web applications using modern frontend and backend technologies</li>
+            <li>Engaging in hands-on tasks with flexible working hours and deadline-driven deliverables</li>
+          </ul>
+
+          <div className="experience-meta">
+            <span>
+              <strong>Certificate: </strong>
+              <a href="/ElevanceSkills-Full  Stack Web Development-Intern-OL.pdf" target="_blank" rel="noopener noreferrer">
+                View Offer Letter →
+              </a>
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   )

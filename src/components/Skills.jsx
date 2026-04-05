@@ -3,28 +3,47 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 const skillGroups = [
   {
     title: 'AI & Machine Learning',
-    icon: '🤖',
-    skills: ['Machine Learning Fundamentals', 'NLP Basics', 'Speech Processing (TTS / STT)', 'Model Training & Evaluation'],
+    icon: 'AI',
+    skills: [
+      'Machine Learning Fundamentals',
+      'NLP Basics',
+      'Speech Processing (TTS / STT)',
+      'Model Training & Evaluation',
+      'PyTorch',
+      'scikit-learn',
+      'Keras',
+      'Streamlit',
+    ],
   },
   {
     title: 'Programming & Core CS',
-    icon: '💻',
+    icon: 'CS',
     skills: ['Java (OOPS)', 'Python', 'C', 'JavaScript', 'DSA (Java)', 'SQL', 'HTML5', 'CSS3'],
   },
   {
-    title: 'Backend & APIs',
-    icon: '⚡',
-    skills: ['Flask', 'FastAPI', 'REST APIs', 'API Integration'],
+    title: 'Frontend & Frameworks',
+    icon: 'UI',
+    skills: ['React', 'Angular.js', 'React Native', 'Vite', 'Tailwind CSS'],
+  },
+  {
+    title: 'Backend, Cloud & APIs',
+    icon: 'API',
+    skills: ['Node.js', 'Flask', 'FastAPI', 'REST APIs', 'API Integration', 'Firebase', 'Nginx', 'Vercel'],
+  },
+  {
+    title: 'Databases & Data Tools',
+    icon: 'DB',
+    skills: ['MongoDB', 'SQLite', 'NumPy', 'Pandas', 'Matplotlib', 'Power BI'],
   },
   {
     title: 'Deployment',
-    icon: '☁️',
+    icon: 'DEP',
     skills: ['GitHub Pages', 'Render', 'Custom Domain Setup', 'HTTPS / SSL'],
   },
   {
-    title: 'Tools',
-    icon: '🔧',
-    skills: ['VS Code', 'Linux (Basic)', 'Canva', 'Git & GitHub', 'Figma', 'UI/UX Principles'],
+    title: 'Tools & Design',
+    icon: 'TL',
+    skills: ['VS Code', 'Linux (Basic)', 'Canva', 'Git & GitHub', 'Figma', 'Adobe XD', 'Postman', 'UI/UX Principles'],
   },
 ]
 
@@ -46,9 +65,9 @@ export default function Skills() {
               </div>
               <div className="skill-tags">
                 {group.skills.map((skill, j) => (
-                  <span 
-                    className="skill-tag" 
-                    key={j} 
+                  <span
+                    className="skill-tag"
+                    key={j}
                     style={{ animationDelay: `${j * 0.06}s` }}
                   >
                     {skill}

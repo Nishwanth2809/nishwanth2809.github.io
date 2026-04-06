@@ -1384,7 +1384,17 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   margin-bottom: 28px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.github-section:hover {
+  box-shadow: 0 0 40px rgba(127, 90, 240, 0.2);
+  border-color: rgba(127, 90, 240, 0.18);
 }
 
 .github-section img {
@@ -1398,6 +1408,12 @@
 
 .github-section img:hover {
   transform: scale(1.04);
+}
+
+.github-context {
+  margin-bottom: 22px;
+  color: var(--text);
+  font-size: 15px;
 }
 
 .btn.secondary {

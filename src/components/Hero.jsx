@@ -32,12 +32,15 @@ export default function Hero() {
         <h1 className="hero-name">
           Hello, I&apos;m <span className="highlight">Nishwanth</span>
         </h1>
+        <p className="hero-tagline">
+          Building AI systems that solve real-world problems
+        </p>
         <p className="hero-title" aria-label={heroTitle}>
           <span>{typedTitle}</span>
           <span className="hero-caret" aria-hidden="true"></span>
         </p>
         <p className="hero-subtitle">
-          I build intelligent systems using AI, Machine Learning, NLP, and scalable web technologies.
+          I turn AI, machine learning, and full-stack engineering into deployable products with clear impact.
         </p>
         <div className="hero-buttons">
           <a href="#projects" className="btn-primary">View Projects</a>
@@ -49,6 +52,11 @@ export default function Hero() {
           >
             Download Resume
           </a>
+        </div>
+        <div className="proof-strip" aria-label="Proof of work">
+          <div className="proof-item">5+ AI Projects</div>
+          <div className="proof-item">3+ Deployed Apps</div>
+          <div className="proof-item">Research Work</div>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const navItems = ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact']
+const navItems = ['Home', 'About', 'Skills', 'Projects', 'Stats', 'Experience', 'Contact']
 
 export default function Navbar({ isDark, toggleTheme }) {
   const [activeSection, setActiveSection] = useState('home')

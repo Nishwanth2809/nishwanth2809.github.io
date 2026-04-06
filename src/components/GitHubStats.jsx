@@ -11,13 +11,11 @@ export default function GitHubStats() {
   }
 
   return (
-    <section id="stats" className="section stats-section">
+    <section id="stats" className="section github">
       <div ref={ref} className="scroll-reveal">
-        <p className="stats-eyebrow">GitHub activity</p>
-        <h2 className="section-title">Code <span className="accent">Signals</span></h2>
-        <hr className="section-divider" />
-        <p className="stats-intro">
-          A stronger proof layer showing profile stats, coding streak, and language mix together.
+        <h2 className="section-title">GitHub Activity</h2>
+        <p className="github-desc">
+          Real-time snapshot of my development consistency and contributions.
         </p>
 
         <div className="github-section">
@@ -43,8 +41,19 @@ export default function GitHubStats() {
           />
         </div>
 
+        <a
+          href="https://github.com/nishwanth2809"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn secondary"
+        >
+          Open GitHub Profile -&gt;
+        </a>
+
         <p id="fallback" className="github-fallback" style={{ display: showFallback ? 'block' : 'none' }}>
-          GitHub stats unavailable. <a href="https://github.com/nishwanth2809" target="_blank" rel="noopener noreferrer">View Profile</a>
+          GitHub stats unavailable -
+          {' '}
+          <a href="https://github.com/nishwanth2809" target="_blank" rel="noopener noreferrer">View Profile</a>
         </p>
       </div>
     </section>

@@ -1,59 +1,45 @@
 import { useState } from 'react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
-const githubUsername = 'Nishwanth2809'
+const username = 'nishwanth2809'
+const statsImage = `https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=tokyonight`
 
 export default function GitHubStats() {
   const ref = useScrollReveal()
-  const [showFallback, setShowFallback] = useState(false)
-
-  const handleImageError = (event) => {
-    event.currentTarget.style.display = 'none'
-    setShowFallback(true)
-  }
+  const [imageFailed, setImageFailed] = useState(false)
 
   return (
-    <section id="stats" className="section github">
+    <section id="stats" className="section stats-section">
       <div ref={ref} className="scroll-reveal">
-        <h2 className="section-title">GitHub Activity</h2>
-        <p className="github-desc">
-          Consistent contributions and real-world development work.
+        <p className="stats-eyebrow">GitHub activity</p>
+        <h2 className="section-title">Code <span className="accent">Signals</span></h2>
+        <hr className="section-divider" />
+        <p className="stats-intro">
+          A centered snapshot of the profile activity and code footprint behind this portfolio.
         </p>
 
-        <div className="github-section">
-          <img
-            src={`https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&theme=tokyonight&cache_seconds=1800`}
-            alt="GitHub Stats"
-            loading="lazy"
-            onError={handleImageError}
-          />
-
-          <img
-            src={`https://streak-stats.demolab.com/?user=${githubUsername}&theme=tokyonight`}
-            alt="GitHub Streak"
-            loading="lazy"
-            onError={handleImageError}
-          />
+        <div className="github-stats">
+          {!imageFailed ? (
+            <img
+              src={statsImage}
+              alt="GitHub stats for nishwanth2809"
+              loading="lazy"
+              onError={() => setImageFailed(true)}
+            />
+          ) : (
+            <div className="github-stats-fallback">
+              <p>GitHub stats image is temporarily unavailable.</p>
+              <a
+                href={`https://github.com/${username}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Open GitHub Profile
+              </a>
+            </div>
+          )}
         </div>
-
-        <p className="github-context">
-          Actively building AI systems, full-stack applications, and experimental projects.
-        </p>
-
-        <a
-          href={`https://github.com/${githubUsername}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn secondary"
-        >
-          View Full GitHub -&gt;
-        </a>
-
-        <p id="fallback" className="github-fallback" style={{ display: showFallback ? 'block' : 'none' }}>
-          GitHub stats unavailable -
-          {' '}
-          <a href={`https://github.com/${githubUsername}`} target="_blank" rel="noopener noreferrer">View Profile</a>
-        </p>
       </div>
     </section>
   )

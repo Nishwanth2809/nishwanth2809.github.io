@@ -13,7 +13,7 @@ export default function FocusAreas() {
   return (
     <section id="focus" className="section focus-section">
       <div ref={ref} className="scroll-reveal">
-        <p className="projects-eyebrow">What I focus on</p>
+        <p className="focus-eyebrow">What I focus on</p>
         <h2 className="section-title">Core <span className="accent">Focus</span></h2>
         <hr className="section-divider" />
 

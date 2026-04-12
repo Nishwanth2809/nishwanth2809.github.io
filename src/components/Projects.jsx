@@ -1,81 +1,141 @@
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
-const featuredProjects = [
+const projects = [
+  {
+    title: 'Brahmi Script Recognizer',
+    subtitle: 'Ancient Script Recognition',
+    meta: 'AI Vision',
+    preview: '/results/brahmi-preview.png',
+    description:
+      'AI-powered web application that recognizes ancient Brahmi script characters from uploaded images and transliterates them into Telugu, Tamil, and Devanagari/Hindi.',
+    chips: ['React', 'Flask', 'TensorFlow/Keras', 'OpenCV'],
+    githubUrl: 'https://github.com/Nishwanth2809/Brahmi-Script',
+    liveDemoUrl: null,
+  },
   {
     title: 'Deepfake Detection System',
+    subtitle: 'Media Authenticity AI',
+    meta: 'Computer Vision',
     preview: '/results/deepfake.png',
-    summary: 'Real-time deepfake detection using ResNet18 + OpenCV',
-    chips: ['Python', 'OpenCV', 'ResNet18'],
-    points: ['~90% accuracy', 'Real-time inference', 'Streamlit deployment'],
+    description:
+      'Real-time deepfake detection pipeline using ResNet18 and OpenCV, built for frame-level analysis and practical media authenticity verification.',
+    chips: ['Python', 'OpenCV', 'ResNet18', 'PyTorch'],
+    githubUrl: 'https://github.com/Nishwanth2809/Deep-Fake-Detection',
+    liveDemoUrl: null,
   },
   {
     title: 'AI Medical Report Analyzer',
+    subtitle: 'Healthcare Report Intelligence',
+    meta: 'Full Stack AI',
     preview: '/results/medical.png',
-    summary: 'Full-stack medical report analysis with OCR and AI workflows',
-    chips: ['React', 'Node.js', 'OCR'],
-    points: ['Healthcare use case', 'Readable AI summaries', 'Deployed product'],
+    description:
+      'Full-stack report analysis system that extracts medical data with OCR and transforms complex healthcare documents into readable AI-generated summaries.',
+    chips: ['React', 'Node.js', 'OCR', 'NLP'],
+    githubUrl: 'https://github.com/Nishwanth2809/AI-Medical-Report-Analyzer',
+    liveDemoUrl: 'https://medical-report-analyzer-three.vercel.app/',
   },
   {
     title: 'Mood-Based Music Recommendation',
+    subtitle: 'NLP Music Discovery',
+    meta: 'NLP',
     preview: '/results/Mood.png',
-    summary: 'NLP-powered music recommendations connected to Spotify',
-    chips: ['Python', 'NLP', 'Spotify API'],
-    points: ['Mood detection', 'API integration', 'Interactive experience'],
+    description:
+      'NLP-powered recommendation experience that detects user mood from text input and maps it to curated Spotify playlists.',
+    chips: ['Python', 'NLP', 'Spotify API', 'Streamlit'],
+    githubUrl: 'https://github.com/Nishwanth2809/Moodify-Let-Your-Mood-Choose-the-Music-',
+    liveDemoUrl: null,
   },
-]
-
-const projectCards = [
   {
     title: 'AI Attention Monitoring System',
-    summary: 'Real-time attention tracking using computer vision',
-    chips: ['OpenCV', 'MediaPipe', 'Flask'],
-    points: ['Gaze + blink detection', 'Live attention score', 'Session tracking'],
+    subtitle: 'Real-Time Focus Tracking',
+    meta: 'Vision Analytics',
+    preview: '/results/AI-Attention.png',
+    description:
+      'Computer vision attention tracker with gaze detection, blink analysis, head pose estimation, live scores, and session analytics.',
+    chips: ['OpenCV', 'MediaPipe', 'Flask', 'React'],
+    githubUrl: 'https://github.com/Nishwanth2809/AI-Attention',
+    liveDemoUrl: null,
   },
   {
     title: 'Voice Chat AI Assistant',
-    summary: 'Voice-first assistant with real-time speech and AI replies',
-    chips: ['FastAPI', 'Speech', 'Python'],
-    points: ['Voice interaction', 'Fast response loop', 'Live AI replies'],
+    subtitle: 'Speech-First AI Interface',
+    meta: 'Voice AI',
+    preview: '/results/Text%20to%20Speech.png',
+    description:
+      'Voice-first AI assistant with real-time speech recognition, NLP processing, synthesized responses, and a low-latency FastAPI response loop.',
+    chips: ['FastAPI', 'Python', 'TTS/STT', 'Speech'],
+    githubUrl: 'https://github.com/Nishwanth2809/Voice-Chat-AI-Assistant',
+    liveDemoUrl: 'https://nishwanth2809.github.io/Voice-Chat-AI-Assistant/',
   },
 ]
 
-function FeaturedCard({ project }) {
+function ArrowIcon() {
   return (
-    <article className="featured-card">
-      <img src={project.preview} alt={`${project.title} preview`} />
-      <div className="featured-card-body">
-        <h3>{project.title}</h3>
-        <p>{project.summary}</p>
-        <div className="chips">
-          {project.chips.map((chip) => (
-            <span key={chip}>{chip}</span>
-          ))}
-        </div>
-        <ul>
-          {project.points.map((point) => (
-            <li key={point}>{point}</li>
-          ))}
-        </ul>
-      </div>
-    </article>
+    <svg
+      aria-hidden="true"
+      className="project-arrow"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M7 7h10v10" />
+      <path d="M7 17 17 7" />
+    </svg>
   )
 }
 
-function ProjectCard({ project }) {
+function ProjectLinks({ project }) {
   return (
-    <article className="project-card">
-      <h3>{project.title}</h3>
-      <p>{project.summary}</p>
-      <div className="chips">
-        {project.chips.map((chip) => (
-          <span key={chip}>{chip}</span>
-        ))}
+    <div className="chronicle-links">
+      {project.liveDemoUrl ? (
+        <a href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer">
+          <span>View Deployment</span>
+          <ArrowIcon />
+        </a>
+      ) : (
+        <span className="chronicle-link-disabled">Deployment Soon</span>
+      )}
+
+      {project.githubUrl ? (
+        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+          <span>View Repository</span>
+          <ArrowIcon />
+        </a>
+      ) : (
+        <span className="chronicle-link-disabled">Repository Soon</span>
+      )}
+    </div>
+  )
+}
+
+function ProjectChronicle({ project, index }) {
+  const number = String(index + 1).padStart(2, '0')
+  const isBrahmiProject = project.title === 'Brahmi Script Recognizer'
+
+  return (
+    <article className="project-chronicle">
+      <div className={`chronicle-preview${isBrahmiProject ? ' chronicle-preview-screenshot' : ''}`}>
+        <img src={project.preview} alt={`${project.title} preview`} />
+        <div className="chronicle-preview-overlay"></div>
+        <div className="chronicle-preview-chips">
+          {project.chips.slice(0, 3).map((chip) => (
+            <span key={chip}>{chip}</span>
+          ))}
+        </div>
       </div>
-      <ul>
-        {project.points.map((point) => (
-          <li key={point}>{point}</li>
-        ))}
-      </ul>
+
+      <div className="chronicle-copy">
+        <div className="chronicle-heading">
+          <span className="chronicle-meta">{number} // {project.meta}</span>
+          <h3>{project.title}</h3>
+          <h4>{project.subtitle}</h4>
+        </div>
+        <p>{project.description}</p>
+        <ProjectLinks project={project} />
+      </div>
     </article>
   )
 }
@@ -86,29 +146,15 @@ export default function Projects() {
   return (
     <section id="projects" className="section projects-section">
       <div ref={ref} className="scroll-reveal">
-        <p className="projects-eyebrow">Proof through shipping</p>
-        <h2 className="section-title">Featured <span className="accent">Work</span></h2>
-        <hr className="section-divider" />
-        <p className="projects-intro">
-          The projects below show how I turn AI ideas into working products with real interfaces, deployment, and measurable outcomes.
-        </p>
-
-        <section className="featured-work-section">
-          <div className="featured-grid">
-            {featuredProjects.map((project) => (
-              <FeaturedCard key={project.title} project={project} />
-            ))}
-          </div>
-        </section>
-
-        <div className="project-scan-header">
-          <h3>More Builds</h3>
-          <p>Compact snapshots of additional systems across AI, NLP, and real-time apps.</p>
+        <div className="chronicles-header">
+          <span className="chronicles-backdrop">WORK</span>
+          <h2 className="section-title">My Creations.</h2>
+          <hr className="section-divider" />
         </div>
 
-        <div className="project-scan-grid">
-          {projectCards.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+        <div className="project-chronicles">
+          {projects.map((project, index) => (
+            <ProjectChronicle key={project.title} project={project} index={index} />
           ))}
         </div>
       </div>

@@ -1,159 +1,118 @@
-import { useScrollReveal } from '../hooks/useScrollReveal'
+import { useRef } from 'react'
 
-const contactStatus = {
-  badge: 'Available for internships',
-  title: 'Start with a quick message',
-  description: 'The fastest way to reach me is by email. Share the role, project, or idea, and I\'ll get back to you.',
-}
-
-const links = [
+const platforms = [
   {
-    label: 'Email',
-    value: 'nishwanthyarra@gmail.com',
-    href: 'mailto:nishwanthyarra@gmail.com',
-    description: 'Best for opportunities and direct collaboration.',
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path
-          d="M4 6h16v12H4z"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M4 8l8 6 8-6"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    label: 'LinkedIn',
-    value: '/in/yarranishwanth',
-    href: 'https://www.linkedin.com/in/yarranishwanth',
-    description: 'For networking, internships, and professional updates.',
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path
-          d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <rect x="2" y="9" width="4" height="12" stroke="currentColor" strokeWidth="2" />
-        <circle cx="4" cy="4" r="2" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
-  },
-  {
+    key: 'github',
     label: 'GitHub',
-    value: '@nishwanth2809',
+    handle: '@nishwanth2809',
     href: 'https://github.com/nishwanth2809',
-    description: 'Browse projects, experiments, and source code.',
+    iconBg: '#F1EFE8',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path
-          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.94-2.64c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0 3.5 8.46c0 5.42 3.3 6.61 6.44 7A3.4 3.4 0 0 0 9 18.1V22"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.532 1.03 1.532 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" fill="#444441" />
       </svg>
     ),
   },
   {
-    label: 'X / Twitter',
-    value: '@Nishwanth2828',
-    href: 'https://x.com/Nishwanth2828',
-    description: 'Follow updates, thoughts, and quick project posts.',
+    key: 'linkedin',
+    label: 'LinkedIn',
+    handle: '/in/yarranishwanth',
+    href: 'https://www.linkedin.com/in/yarranishwanth',
+    iconBg: '#E6F1FB',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path
-          d="M4 4l6.6 8.82L4.42 20H7.5l4.5-5.18L15.9 20H20L13 10.66 18.8 4H15.7l-4 4.61L8.25 4H4z"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="#185FA5" />
+      </svg>
+    ),
+  },
+  {
+    key: 'mail',
+    label: 'Email',
+    handle: 'nishwanthyarra@gmail.com',
+    href: 'mailto:nishwanthyarra@gmail.com',
+    iconBg: '#FAEEDA',
+    icon: (
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.236-8 4.882-8-4.882V6l8 4.882L20 6v2.236z" fill="#BA7517" />
+      </svg>
+    ),
+  },
+  {
+    key: 'twitter',
+    label: 'X / Twitter',
+    handle: '@Nishwanth2828',
+    href: 'https://x.com/Nishwanth2828',
+    iconBg: '#EEEDFE',
+    icon: (
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.843L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" fill="#534AB7" />
       </svg>
     ),
   },
 ]
 
-const highlights = [
-  'Open to internships and AI-focused projects',
-  'Usually replies within a day',
-  'Based in India and available for remote collaboration',
-]
+function PlatformBtn({ label, handle, href, iconBg, icon, delay }) {
+  const ref = useRef(null)
 
-export default function Contact() {
-  const ref = useScrollReveal()
+  const addRipple = (event) => {
+    const button = ref.current
+    if (!button) {
+      return
+    }
+
+    const rect = button.getBoundingClientRect()
+    const ripple = document.createElement('span')
+    ripple.className = 'cw-ripple'
+    ripple.style.left = `${event.clientX - rect.left}px`
+    ripple.style.top = `${event.clientY - rect.top}px`
+    button.appendChild(ripple)
+    window.setTimeout(() => ripple.remove(), 520)
+  }
+
+  const isEmail = href.startsWith('mailto')
 
   return (
+    <a
+      ref={ref}
+      href={href}
+      target={isEmail ? undefined : '_blank'}
+      rel={isEmail ? undefined : 'noreferrer'}
+      className="cw-btn"
+      style={{ animationDelay: `${delay}s` }}
+      onClick={addRipple}
+    >
+      <div className="cw-icon" style={{ backgroundColor: iconBg }}>
+        {icon}
+      </div>
+      <div className="cw-copy">
+        <span className="cw-label">{label}</span>
+        <span className="cw-handle">{handle}</span>
+      </div>
+      <span className="cw-arrow" aria-hidden="true">↗</span>
+    </a>
+  )
+}
+
+export default function Contact() {
+  return (
     <section id="contact" className="section contact-section">
-      <div ref={ref} className="scroll-reveal">
-        <div className="contact-shell">
-          <div className="contact-intro">
-            <p className="contact-kicker">Let&apos;s build something useful</p>
-            <h2 className="section-title">Connect <span className="accent">With Me</span></h2>
-            <p className="contact-text">
-              If you have an internship, project idea, or collaboration in AI and web development,
-              I&apos;d love to hear about it. I enjoy building practical products and working with teams
-              that care about real impact.
-            </p>
+      <div className="contact-shell">
+        <p className="contact-kicker">Get in touch</p>
+        <h2 className="section-title">Connect <span className="accent">With Me</span></h2>
+        <hr className="section-divider" />
+        <p className="contact-text">
+          Feel free to reach out. Always happy to talk about new projects, opportunities, or a good chat.
+        </p>
 
-            <div className="contact-cta-card">
-              <div className="contact-cta-copy">
-                <span className="contact-availability">{contactStatus.badge}</span>
-                <h3>{contactStatus.title}</h3>
-                <p>{contactStatus.description}</p>
-              </div>
+        <div className="contact-status">
+          <span className="cw-dot" aria-hidden="true" />
+          <span>Open to work</span>
+        </div>
 
-              <div className="contact-cta-actions">
-                <a href="mailto:nishwanthyarra@gmail.com" className="btn-primary">
-                  Email Me
-                </a>
-                <a href="/Nishwanth_Resume.pdf" className="btn-outline" target="_blank" rel="noopener noreferrer">
-                  View Resume
-                </a>
-              </div>
-            </div>
-
-            <div className="contact-highlights">
-              {highlights.map((item) => (
-                <div className="contact-highlight" key={item}>
-                  <span className="contact-highlight-dot" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="contact-grid">
-            {links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target={link.href.startsWith('mailto') ? undefined : '_blank'}
-                rel="noopener noreferrer"
-                className="contact-card"
-              >
-                <div className="contact-card-icon">{link.icon}</div>
-                <div className="contact-card-body">
-                  <p className="contact-card-label">{link.label}</p>
-                  <p className="contact-card-value">{link.value}</p>
-                  <p>{link.description}</p>
-                </div>
-                <span className="contact-card-arrow">↗</span>
-              </a>
-            ))}
-          </div>
+        <div className="contact-platform-grid">
+          {platforms.map((platform, index) => (
+            <PlatformBtn key={platform.key} {...platform} delay={0.06 * index} />
+          ))}
         </div>
       </div>
     </section>

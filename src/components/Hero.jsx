@@ -54,8 +54,8 @@ export default function Hero() {
           </a>
         </div>
         <div className="proof-strip" aria-label="Proof of work">
-          <div className="proof-item">5+ AI Projects</div>
-          <div className="proof-item">3+ Deployed Apps</div>
+          <div className="proof-item">6+ AI Projects</div>
+          <div className="proof-item">4+ Deployed Apps</div>
           <div className="proof-item">Research Work</div>
         </div>
       </div>

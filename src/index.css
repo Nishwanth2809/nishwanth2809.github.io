@@ -73,6 +73,10 @@ body {
   overflow-x: hidden;
 }
 
+body:not(.dark) {
+  background: #f8fafc;
+}
+
 body::before {
   content: '';
   position: fixed;

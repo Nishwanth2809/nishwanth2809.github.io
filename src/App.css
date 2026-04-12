@@ -495,18 +495,13 @@
    ========================================== */
 
 .skills-section {
-  background: var(--bg-secondary);
-  border-radius: 28px;
-  box-shadow: 0 14px 32px rgba(2, 6, 23, 0.08);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-.skills-eyebrow {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
+.skills-header {
+  margin-bottom: 58px;
 }
 
 .skills-card-grid {
@@ -2738,6 +2733,12 @@ body:not(.dark) .chronicles-header {
 
 body:not(.dark) .chronicles-backdrop {
   display: none;
+}
+
+body:not(.dark) .skills-header .chronicles-backdrop {
+  display: block;
+  color: #4f46e5;
+  opacity: 0.05;
 }
 
 body:not(.dark) .projects-section .section-title {

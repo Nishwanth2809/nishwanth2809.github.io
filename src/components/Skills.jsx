@@ -160,9 +160,11 @@ export default function Skills() {
   return (
     <section id="skills" className="section skills-section">
       <div ref={ref} className="scroll-reveal">
-        <p className="skills-eyebrow">What I work with</p>
-        <h2 className="section-title">Technical <span className="accent">Skills</span></h2>
-        <hr className="section-divider" />
+        <div className="chronicles-header skills-header">
+          <span className="chronicles-backdrop">TOOLS</span>
+          <h2 className="section-title">Technical <span className="accent">Skills</span></h2>
+          <hr className="section-divider" />
+        </div>
 
         <div className="skills-card-grid">
           {skillGroups.map((group) => (

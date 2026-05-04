@@ -10,7 +10,7 @@ const projects = [
       'AI-powered web application that recognizes ancient Brahmi script characters from uploaded images and transliterates them into Telugu, Tamil, and Devanagari/Hindi.',
     chips: ['React', 'Flask', 'TensorFlow/Keras', 'OpenCV'],
     githubUrl: 'https://github.com/Nishwanth2809/Brahmi-Script',
-    liveDemoUrl: null,
+    liveDemoUrl: 'https://brahmi-script-evolution.vercel.app/',
   },
   {
     title: 'Deepfake Detection System',
@@ -43,7 +43,7 @@ const projects = [
       'NLP-powered recommendation experience that detects user mood from text input and maps it to curated Spotify playlists.',
     chips: ['Python', 'NLP', 'Spotify API', 'Streamlit'],
     githubUrl: 'https://github.com/Nishwanth2809/Moodify-Let-Your-Mood-Choose-the-Music-',
-    liveDemoUrl: null,
+    liveDemoUrl: 'https://moodstream-q4lr.onrender.com/',
   },
   {
     title: 'AI Attention Monitoring System',

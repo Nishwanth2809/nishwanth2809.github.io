@@ -18,8 +18,8 @@ const skillGroups = [
       </svg>
     ),
     skills: [
-      'Machine Learning Fundamentals',
-      'NLP Basics',
+      'Machine Learning',
+      'NLP',
       'Speech Processing (TTS / STT)',
       'Model Training & Evaluation',
       'PyTorch',
@@ -50,7 +50,7 @@ const skillGroups = [
         />
       </svg>
     ),
-    skills: ['Java (OOPS)', 'Python', 'C', 'JavaScript', 'DSA (Java)', 'SQL', 'HTML5', 'CSS3'],
+    skills: ['Java (OOP)', 'Python', 'C', 'JavaScript', 'DSA (Java)', 'SQL', 'HTML5', 'CSS3'],
   },
   {
     id: 'frontend',
@@ -161,7 +161,7 @@ export default function Skills() {
     <section id="skills" className="section skills-section">
       <div ref={ref} className="scroll-reveal">
         <div className="chronicles-header skills-header">
-          <span className="chronicles-backdrop">TOOLS</span>
+          <span className="chronicles-backdrop" aria-hidden="true">TOOLS</span>
           <h2 className="section-title">Technical <span className="accent">Skills</span></h2>
           <hr className="section-divider" />
         </div>
@@ -169,12 +169,14 @@ export default function Skills() {
         <div className="skills-card-grid">
           {skillGroups.map((group) => (
             <article className={`skills-card skills-card-${group.color}`} key={group.id}>
-              <div className="skills-card-icon">{group.icon}</div>
-              <p className="skills-card-title">{group.title}</p>
+              <div className="skills-card-header">
+                <div className="skills-card-icon">{group.icon}</div>
+                <p className="skills-card-title">{group.title}</p>
+              </div>
               <div className="skills-card-tags">
                 {group.skills.map((skill, index) => (
                   <span
-                    className="skills-card-tag"
+                    className="skills-badge"
                     key={skill}
                     style={{ animationDelay: `${index * 0.05}s` }}
                   >

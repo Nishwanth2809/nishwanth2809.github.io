@@ -6,8 +6,12 @@ export default function Experience() {
   return (
     <section id="experience" className="section">
       <div ref={ref} className="scroll-reveal">
-        <h2 className="section-title">My <span className="accent">Experience</span></h2>
-        <hr className="section-divider" />
+        <div className="chronicles-header">
+          <p className="chronicles-kicker">My Journey</p>
+          <h2 className="section-title">My <span className="accent">Experience</span></h2>
+          <hr className="section-divider" />
+          <span className="chronicles-backdrop" aria-hidden="true">JOURNEY</span>
+        </div>
 
         <div className="experience-card">
           <h4>Design Member</h4>

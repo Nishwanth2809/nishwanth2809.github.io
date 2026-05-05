@@ -3,7 +3,6 @@
    ========================================== */
 
 :root {
-  /* Light theme */
   --bg: #f8fafc;
   --bg-secondary: #f1f5f9;
   --text: #0f172a;
@@ -102,17 +101,41 @@ body::after {
   pointer-events: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+header, section, footer, .card, .project-card, .experience-card {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ==========================================
+   SCROLLBAR
+   ========================================== */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-hover); }
+
+/* ==========================================
+   CURSOR GLOW
+   ========================================== */
+
 .cursor-glow {
   position: fixed;
   left: var(--cursor-x);
   top: var(--cursor-y);
   pointer-events: none;
   opacity: var(--cursor-opacity);
-  transition: opacity 0.25s ease, transform 0.25s ease, width 0.25s ease, height 0.25s ease;
+  transition: opacity 0.25s ease, transform 0.15s ease;
   z-index: 1500;
-}
-
-.cursor-glow {
   width: 240px;
   height: 240px;
   border-radius: 50%;
@@ -121,40 +144,6 @@ body::after {
   filter: blur(24px);
 }
 
-/* Selection styling */
-::selection {
-  background: var(--accent);
-  color: #fff;
-}
-
-/* Smooth transitions on theme-affected elements */
-header, section, footer, .card, .project-card, .experience-card {
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-}
-
 @media (pointer: coarse) {
-  .cursor-glow {
-    display: none;
-  }
-}
-
-/* ==========================================
-   SCROLLBAR
-   ========================================== */
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-hover);
+  .cursor-glow { display: none; }
 }

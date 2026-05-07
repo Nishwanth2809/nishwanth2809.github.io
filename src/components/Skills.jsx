@@ -74,7 +74,7 @@ const skillGroups = [
         />
       </svg>
     ),
-    skills: ['React', 'Angular.js', 'React Native', 'Vite', 'Tailwind CSS'],
+    skills: ['React', 'Next.js', 'Angular.js', 'React Native', 'Vite', 'Tailwind CSS'],
   },
   {
     id: 'backend',
@@ -95,7 +95,7 @@ const skillGroups = [
         <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       </svg>
     ),
-    skills: ['Node.js', 'Flask', 'FastAPI', 'REST APIs', 'API Integration', 'Firebase', 'Nginx', 'Vercel'],
+    skills: ['Node.js', 'Express.js', 'Flask', 'FastAPI', 'REST APIs', 'API Integration', 'Firebase', 'Razorpay', 'Vercel'],
   },
   {
     id: 'data',

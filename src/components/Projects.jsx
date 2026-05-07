@@ -3,6 +3,17 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const projects = [
   {
+    title: 'Twiller (X Clone)',
+    problem: 'Standard social platforms lack granular control over feature access and time-gated interactions.',
+    description:
+      'A robust social media platform featuring audio tweets, tiered subscriptions, Razorpay integration, and automated OTP-based security workflows.',
+    metric: 'Integrated 15+ complex API endpoints',
+    category: 'Full Stack',
+    chips: ['Next.js', 'Express', 'MongoDB', 'Firebase', 'Razorpay', 'Tailwind'],
+    githubUrl: 'https://github.com/Nishwanth2809/twiller',
+    liveDemoUrl: 'https://twiller-ruby.vercel.app/',
+  },
+  {
     title: 'Brahmi Script Recognizer',
     problem: 'Ancient Brahmi characters are largely unreadable by modern OCR tools.',
     description:
@@ -70,7 +81,7 @@ const projects = [
   },
 ]
 
-const filters = ['All', 'ML', 'Deep Learning', 'NLP', 'Computer Vision']
+const filters = ['All', 'Full Stack', 'ML', 'Deep Learning', 'NLP', 'Computer Vision']
 
 export default function Projects() {
   const ref = useScrollReveal(0.05)

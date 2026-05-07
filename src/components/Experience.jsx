@@ -39,9 +39,9 @@ export default function Experience() {
           <p className="experience-org">ElevanceSkills &nbsp;·&nbsp; Apr 2026 – Oct 2026 (6 Months)</p>
 
           <ul className="experience-list">
-            <li>Working on real-time projects in a dynamic full stack development environment</li>
-            <li>Building and deploying web applications using modern frontend and backend technologies</li>
-            <li>Engaging in hands-on tasks with flexible working hours and deadline-driven deliverables</li>
+            <li>Developing <strong>Twiller (X Clone)</strong>, a robust social platform featuring audio tweets, tiered subscriptions with Razorpay integration, and automated security workflows.</li>
+            <li>Working on real-time projects in a dynamic full stack development environment using Next.js, Express, and MongoDB.</li>
+            <li>Building and deploying production-ready web applications with integrated authentication and payment systems.</li>
           </ul>
 
           <div className="experience-meta">
